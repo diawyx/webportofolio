@@ -457,6 +457,69 @@
   /* ── REVEAL ── */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s, transform 0.8s; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .nav-order { padding: 8px 16px; font-size: 0.72rem; }
+    .logo-text { font-size: 1rem; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding-top: 82px;
+    }
+    .hero-left { padding: 48px 24px 40px; }
+    .hero-title { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+    .hero-right { height: 320px; }
+    .hero-card { bottom: 20px; left: 12px; min-width: 160px; padding: 14px 16px; }
+    .hero-card2 { top: 20px; right: 12px; padding: 14px 16px; }
+    .hero-card2 strong { font-size: 1.2rem; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+
+    .strip {
+      padding: 16px 20px;
+      flex-direction: column; gap: 12px; align-items: flex-start;
+    }
+    .strip-divider { display: none; }
+
+    .about { padding: 72px 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-images { grid-template-rows: 200px 200px; }
+    .about-badge { width: 90px; height: 90px; bottom: -12px; right: -8px; }
+    .about-badge strong { font-size: 1.4rem; }
+    .about-features { grid-template-columns: 1fr; }
+
+    .menu { padding: 72px 24px; }
+    .menu-tabs { gap: 6px; flex-wrap: wrap; justify-content: flex-start; }
+    .menu-tab { padding: 8px 16px; font-size: 0.75rem; }
+    .menu-section.active { grid-template-columns: 1fr; }
+
+    .gallery { padding: 72px 24px; }
+    .gallery-masonry { columns: 2; column-gap: 10px; }
+
+    .testimonials { padding: 72px 24px; }
+    .testi-grid { grid-template-columns: 1fr; }
+
+    .contact { padding: 72px 24px; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .contact-left { padding: 40px 28px; }
+    .contact-right { padding: 40px 28px; }
+    .form-row { grid-template-columns: 1fr; }
+    .btn-form { width: 100%; }
+
+    footer { padding: 48px 24px 24px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 2.2rem; }
+    .about-images { grid-template-columns: 1fr; grid-template-rows: 200px 160px 160px; }
+    .about-img:first-child { grid-row: span 1; }
+    .footer-top { grid-template-columns: 1fr; }
+    .gallery-masonry { columns: 1; }
+  }
 </style>
 </head>
 <body>
@@ -693,6 +756,7 @@
     <div class="gallery-item"><img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" alt="Food"></div>
     <div class="gallery-item"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Coffee"></div>
     <div class="gallery-item"><img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80" alt="Brunch"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1525193612562-0ec53b0e5d7c?w=600&q=80" alt="Pastry"></div>
   </div>
 </section>
 
@@ -823,7 +887,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 The Harbour Café. All rights reserved.</p>
-    <p style="color:rgba(253,248,242,0.2);font-size:0.75rem;">Website by FolioWorks</p>
+    <p style="color:rgba(253,248,242,0.2);font-size:0.75rem;">Website by YourName</p>
   </div>
 </footer>
 
